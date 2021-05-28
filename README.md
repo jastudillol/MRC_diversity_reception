@@ -35,7 +35,15 @@ To import the binary files, you have to use the following code in your main func
 	uint32_t int_p_m= (uint32_t) p_m_equivalente;
 	uint32_t int_p_omega= (uint32_t) p_omega_equivalente;
 	uint32_t a_max_distance= (uint32_t) mysize;
-  
+	
+	...
+	
+	YansWifiChannelHelper wifiChannel ;
+	wifiChannel.SetPropagationDelay ("ns3::ConstantSpeedPropagationDelayModel");
+	wifiChannel.AddPropagationLoss("ns3::LogDistancePropagationLossModel");
+	wifiChannel.AddPropagationLoss("ns3::NakagamiPropagationLossModel",
+			"maxdistance",IntegerValue(a_max_distance),"mequi",IntegerValue(int_p_m),"omegaequi",IntegerValue(int_p_omega));
+ 
 *** ns-3 Building
 
 The wireless channel model has been implemented in ns3. However, the Nakami-m model has been modeled with its new parameters (m and Ω) in MATLAB. Therefore, since these two tools work together, some flags must be enabled when building and compiling the ns-3 in order to avoid errors in execution.
