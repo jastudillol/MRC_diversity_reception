@@ -13,11 +13,12 @@ The following steps has to be done to implement diversity reception in ns-3.
 1. Overwrite the 'src/propagation/model/' inside the ns-3 folder with following files:
 
 	propagation-loss-model.cc
+	
 	propagation-loss-model.h
 
 2.  The resulting binary file has to be imported into the ns-3 simulator only once at the beginning of the simulation. The idea here is that when a packet is received, the distance is checked, and from this distance, we map the equivalent parameters. Thus, there are equivalent values of m and Ω for a given distance, and with these equivalent values, the power value that simulates the diversity reception is generated.
 
-For this purpose, 'ns-3.27/Nakagami/' folder has different binary files for four diversity orders.
+For this purpose, 'ns-3.27/Nakagami/' folder has different binary files for four diversity orders. These binary files have been computed with the OptimalParameter.m script.
 
 To import the binary files, you have to use the following code in your main function inside the ns-3 script:
 
