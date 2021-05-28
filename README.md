@@ -2,7 +2,7 @@
 
 ***OptimalParameters.m
 
-The MRC approximation has been implemented using MATLAB.  We have considered multiple parameters such as transmission power, distance of the link, frequency, transmission gain, and reception gain. Then, two equivalent parameters, m and $\Omega$, are generated, calculated, and evaluated using a MATLAB script through the MLE technique. Therefore, the resulting binary file contains a parameter array with the $\Omega$ and m equivalent parameters for different distances.
+The MRC approximation has been implemented using MATLAB.  We have considered multiple parameters such as transmission power, distance of the link, frequency, transmission gain, and reception gain. Then, two equivalent parameters, m and Ω, are generated, calculated, and evaluated using a MATLAB script through the MLE technique. Therefore, the resulting binary file contains a parameter array with the Ω and m equivalent parameters for different distances.
 
 Note that a resulting file is generated for each order of diversity. For instance, in the OptimalParameters.m, a 'parameters_naka.bin' binary file is generated for a diversity order of 4. If you want to modify the diversity order, the 'N' MATLAB variable has to modified.
 
@@ -13,7 +13,7 @@ Note that a resulting file is generated for each order of diversity. For instanc
 	propagation-loss-model.cc
 	propagation-loss-model.h
 
-2.  The resulting binary file has to be imported into the ns-3 simulator only once at the beginning of the simulation. The idea here is that when a packet is received, the distance is checked, and from this distance, we map the equivalent parameters. Thus, there are equivalent values of m and $\Omega$ for a given distance, and with these equivalent values, the power value that simulates the diversity reception is generated.
+2.  The resulting binary file has to be imported into the ns-3 simulator only once at the beginning of the simulation. The idea here is that when a packet is received, the distance is checked, and from this distance, we map the equivalent parameters. Thus, there are equivalent values of m and Ω for a given distance, and with these equivalent values, the power value that simulates the diversity reception is generated.
 
 For this purpose, 'ns-3.27/Nakagami/' folder has different binary files for four diversity orders.
 
