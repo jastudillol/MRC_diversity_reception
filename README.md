@@ -4,9 +4,11 @@
 
 The MRC approximation has been implemented using MATLAB.  We have considered multiple parameters such as transmission power, distance of the link, frequency, transmission gain, and reception gain. Then, two equivalent parameters, m and Ω, are generated, calculated, and evaluated using a MATLAB script through the MLE technique. Therefore, the resulting binary file contains a parameter array with the Ω and m equivalent parameters for different distances.
 
-Note that a resulting file is generated for each order of diversity. For instance, in the OptimalParameters.m, a 'parameters_naka.bin' binary file is generated for a diversity order of 4. If you want to modify the diversity order, the 'N' MATLAB variable has to modified.
+Note that a resulting file is generated for each order of diversity. For instance, in the OptimalParameters.m, a 'parameters_naka.bin' binary file is generated for a diversity order of 4. If you want to modify the diversity order, the 'N' MATLAB variable has to be modified.
 
 ***ns-3 Implementation.
+
+The following steps has to be done to implement diversity reception in ns-3.
 
 1. Overwrite the 'src/propagation/model/' inside the ns-3 folder with following files:
 
