@@ -2,9 +2,9 @@
 
 ***OptimalParameters.m
 
-	The MRC approximation has been implemented using MATLAB.  We have considered multiple parameters such as transmission power, distance of the link, frequency, transmission gain, and reception gain. Then, two equivalent parameters, m and $\Omega$, are generated, calculated, and evaluated using a MATLAB script through the MLE technique. Therefore, the resulting binary file contains a parameter array with the $\Omega$ and m equivalent parameters for different distances.
+The MRC approximation has been implemented using MATLAB.  We have considered multiple parameters such as transmission power, distance of the link, frequency, transmission gain, and reception gain. Then, two equivalent parameters, m and $\Omega$, are generated, calculated, and evaluated using a MATLAB script through the MLE technique. Therefore, the resulting binary file contains a parameter array with the $\Omega$ and m equivalent parameters for different distances.
 
-	Note that a resulting file is generated for each order of diversity. For instance, in the OptimalParameters.m, a 'parameters_naka.bin' binary file is generated for a diversity order of 4. If you want to modify the diversity order, the 'N' MATLAB variable has to modified.
+Note that a resulting file is generated for each order of diversity. For instance, in the OptimalParameters.m, a 'parameters_naka.bin' binary file is generated for a diversity order of 4. If you want to modify the diversity order, the 'N' MATLAB variable has to modified.
 
 ***ns-3 Implementation.
 
